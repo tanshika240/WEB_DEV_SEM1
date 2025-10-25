@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hotel Room Booking Form</title>
+  </head>
+  <body>
+    <div
+      style="
+        border: 3px solid black;
+        width: 400px;
+        padding: 15px;
+        text-align: left;
+      "
+    >
+      <h2>Hotel Room Booking Form</h2>
+      <form action="/submit_booking" method="post">
+        <label for="name">Full Name:</label><br />
+        <label for="name">Full Name:</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">Email Address:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label for="phone">Phone Number:</label><br />
+        <input type="tel" id="phone" name="phone" required /><br /><br />
+
+        <label for="checkin">Check-in Date:</label><br />
+        <input type="date" id="checkin" name="checkin" required /><br /><br />
+
+        <label for="checkout">Check-out Date:</label><br />
+        <input type="date" id="checkout" name="checkout" required /><br /><br />
+
+        <label for="roomType">Room Type:</label><br />
+        <select id="roomType" name="roomType" required>
+          <option value="">Select Room Type</option>
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <option value="suite">Suite</option></select
+        ><br /><br />
+        <label for="guests">Number of Guests:</label><br />
+        <input
+          type="number"
+          id="guests"
+          name="guests"
+          min="1"
+          max="10"
+          required
+        /><br /><br />
+
+        <label for="requests">Special Requests:</label><br />
+        <textarea id="requests" name="requests" rows="4"></textarea><br /><br />
+
+        <button type="submit">Book Now</button>
+        <button type="reset">Reset</button>
+      </form>
+      <br />
+      <div>
+        <span>By Anshika Tomar</span>
+        <span>2025B01011251</span>
+      </div>
+    </div>
+  </body>
+</html>
