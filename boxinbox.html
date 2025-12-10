@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CSS Box Model</title>
+  <style>
+    :root{
+      --bg: #000000;        /* deep navy background */
+      --margin-color: #ff6b4a; /* coral/orange */
+      --border-color: #07a3b9; /* teal blue */
+      --padding-color: #f6c84a; /* golden yellow */
+      --content-color: #00c3a3; /* turquoise/green */
+      --label-color: #ffffff;
+    }
+
+    /* Reset & layout */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg, #2b3b4d 0%, var(--bg) 100%);
+      color:var(--label-color);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px;
+    }
+
+    /* page container to limit width and center content vertically */
+    .page {
+      width:100%;
+      max-width:820px;
+      text-align:center;
+    }
+
+    /* Title */
+    .title {
+      margin: 0 0 38px;
+    }
+    .title h1{
+      font-size:50px;
+      margin:0;
+      font-weight:700;
+      line-height:1;
+      letter-spacing:0.5px;
+    }
+    .title h2{
+      font-size:45px;
+      margin:8px 0 0;
+      font-weight:600;
+      line-height:1;
+    }
+
+    /* The framed illustration area */
+    .illustration {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto;
+    }
+
+    /* Outermost colored 'margin' box (visual only) */
+    .box-margin{
+      background:var(--margin-color);
+      padding:36px; /* thickness of the margin band */
+      display:inline-block;
+      position:relative;
+      width:520px; /* overall width of the stacked frame */
+      height:420px;
+    }
+    .box-margin .label{
+      position:absolute;
+      top:12px;
+      left:50%;
+      transform:translateX(-50%);
+      font-size:15px;
+      font-weight:600;
+      color:var(--label-color);
+      pointer-events:none;
+      letter-spacing:0.3px;
+    }
+
+    /* next inner band (visual border) */
+    .box-border{
+      background:var(--border-color);
+      padding:28px; /* thickness of the border band */
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+    }
+    .box-border > .label{
+      position:absolute;
+      top:14px;
+      left:50%;
+      transform:translateX(-50%);
+      font-size:15px;
+      font-weight:600;
+      color:var(--label-color);
+    }
+
+    /* padding band */
+    .box-padding{
+      background:var(--padding-color);
+      padding:30px; /* thickness of the padding band */
+      height:100%;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+    }
+    .box-padding > .label{
+      position:absolute;
+      top:16px;
+      left:50%;
+      transform:translateX(-50%);
+      font-size:15px;
+      font-weight:600;
+      color:var(--label-color);
+    }
+
+    /* content area */
+    .box-content{
+      background:var(--content-color);
+      width:100%;
+      height:100%;
+      max-width:320px;
+      max-height:220px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      box-shadow: rgba(0,0,0,0.05) 0 0 0 4px inset; /* subtle inner border */
+    }
+    .box-content .label{
+      font-size:15px;
+      font-weight:600;
+      color:var(--label-color);
+      text-align:center;
+    }
+
+    /* Responsive scaling for narrow viewports */
+    @media (max-width:640px){
+      .title h1{font-size:44px}
+      .title h2{font-size:28px}
+      .box-margin{width:320px;height:260px;padding:26px}
+      .box-border{padding:20px}
+      .box-padding{padding:18px}
+      .box-content{max-width:220px;max-height:140px}
+      .box-margin .label{font-size:18px;top:8px}
+    }
+  </style>
+</head>
+<body>
+  <div class="page" role="main" aria-label="CSS box model illustration">
+    <div class="title" aria-hidden="true">
+      <h1>CSS</h1>
+      <h2>Box Model</h2>
+    </div>
+
+    <div class="illustration" aria-hidden="false">
+      <!-- Outer 'margin' band (visual) -->
+      <div class="box-margin" aria-label="Margin (visual band)">
+        <div class="label">Margin</div>
+
+        <!-- Inner 'border' band (visual) -->
+        <div class="box-border" aria-label="Border (visual band)">
+          <div class="label">Border</div>
+
+          <!-- Inner 'padding' band (visual) -->
+          <div class="box-padding" aria-label="Padding (visual band)">
+            <div class="label">Padding</div>
+
+            <!-- Content -->
+            <div class="box-content" aria-label="Content area">
+              <div class="label">Content</div>
+            </div>
+
+          </div><!-- .box-padding -->
+        </div><!-- .box-border -->
+      </div><!-- .box-margin -->
+    </div>
+  </div>
+</body>
+</html>

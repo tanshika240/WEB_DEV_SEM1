@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Product Page</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+nav a{
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.table-box{
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td{
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: center;
+}
+
+table th{
+    background: #ffe6cc;
+}
+
+img{
+    width: 130px;
+    height: auto;
+}
+</style>
+</head>
+
+<body>
+
+<div align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" width="900" alt="Amazon Logo">
+</div>
+
+<h1>Welcome to Amazon</h1>
+
+<nav>
+    <a href="#">Home</a>|
+    <a href="#">Laptop</a>|
+    <a href="#">Watches</a>|
+    <a href="#">Phones</a>|
+    <a href="#">Earbuds</a>
+    <a href="#">Cart</a>
+</nav>
+
+<h2>Top Deals on Electronics</h2>
+
+<div class="container">
+
+    <!-- TABLE 1 – LAPTOPS -->
+    <div class="table-box">
+        <h2>Laptops</h2>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td><img src="https://m.media-amazon.com/images/I/71G8dq4XAwL.jpg"></td>
+                <td>HP Victus</td>
+            </tr>
+            <tr>
+                <td><img src="https://electronicparadise.in/cdn/shop/files/main_21aaad9f-cb87-4c84-b97d-49edd8ccedc8_1.jpg?v=1709186511&width=1406"></td>
+                <td>Lenevo IdeaPad  Slim 3</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- TABLE 2 – WATCHES -->
+    <div class="table-box">
+        <h2>Watches</h2>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td><img src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Sports-Mode.gif?v=1681819677"width="150" height="100"><br></td>
+                <td>Boat lunar Smart watch</td>
+            </tr>
+            <tr>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLANhvrDcAqYuWqScMOyklUAIaQMk_Fmenbg&s"width="150" height="100"><br></td>
+                <td>Apple Watch SE</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- TABLE 3 – PHONES -->
+    <div class="table-box">
+        <h2>Phones</h2>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td><img src="https://www.samsungmobilepress.com/file/FC05AE750AD6EB0673D9E9D4C157D4FDCA91C0319D37B2827A4ACC850D3D124959298BB89A1D18EEB9531CE7B6BDB56BB43890C99A07EF46FFD865333FEC385C3A4ECDA52E32E217D32C2807BAAF403A9124FE24BD2AD9F141EA995A91D14E9095EC253173B6A26FE1DB745A586CC1ADDE7D6D440FA45C94CA365A5CF1A540E7"width="150" height="100"><br></td>
+                <td>Samsung Galaxy S24 ultra</td>
+            </tr>
+            <tr>
+                <td><img src="https://www.gadgetbridge.com/wp-content/uploads/2024/09/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large_.webp"width="150" height="100"><br></td>
+                <td> Apple Iphone 16 Pro</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- TABLE 4 – Earbuds -->
+    <div class="table-box">
+        <h2>Earbuds</h2>
+        <table>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td><img src="https://m.media-amazon.com/images/I/61bcY1YYXoL._AC_UF1000,1000_QL80_.jpg"width="150" height="100"><br></td>
+                <td>Noise Buds N1</td>
+            </tr>
+            <tr>
+                <td><img src="https://m.media-amazon.com/images/I/51gXxN5WySL._AC_UF1000,1000_QL80_.jpg"width="150" height="100"><br></td>
+                <td>Oppo Enco Buds</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
