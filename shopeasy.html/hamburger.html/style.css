@@ -1,0 +1,88 @@
+/* Navbar Styling */
+.navbar {
+    background: #222;
+    color: white;
+    padding: 12px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Center Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Right side icons */
+.right-menu a {
+    margin-left: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+/* ---------- Hamburger (Mobile Only) ----------- */
+.menu-icon {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* Hide checkbox */
+#menu-btn {
+    display: none;
+}
+
+/* ---------- Responsive Design ---------- */
+
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    /* Hide menus by default */
+    .nav-links,
+    .right-menu {
+        display: none;
+        width: 100%;
+        background: #222;
+        text-align: center;
+        padding: 10px 0;
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    /* Show menus when checkbox = checked */
+    #menu-btn:checked ~ .nav-links,
+    #menu-btn:checked ~ .right-menu {
+        display: flex;
+    }
+
+    /* Navbar becomes column */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Hero Section */
+.hero {
+    padding: 40px;
+}
